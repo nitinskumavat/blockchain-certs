@@ -14,7 +14,9 @@ class App extends Component {
     name: "",
     course: "",
     txh: "",
-    id: ""
+    id: "",
+    output: [],
+    tofound: false
   };
   componentDidMount() {
     this.loadBlockchainData();
@@ -37,7 +39,8 @@ class App extends Component {
   add = data => {
     //const certificates = new this.state.web3.eth.Contract(abi, address);
     //console.log(data.fname, data.course, data.email);
-    certcontract.methods.addcert(data.fname, data.course, data.email).send(
+    var name = data.fname + " " + data.lname;
+    certcontract.methods.addcert(name, data.course, data.email).send(
       {
         from: this.state.account,
         gas: 500000
@@ -65,14 +68,19 @@ class App extends Component {
       }
     );
   };
-
   get = data => {
     //console.log(data.id);
     certcontract.methods
       .getcert(data.id)
       .call({ from: this.state.account }, (error, result) => {
-        if (!error) console.log(result);
-        else alert("Certificate not found");
+        if (!error) {
+          console.log(result);
+          const v = Object.values(result);
+          this.setState({ output: v });
+          this.setState({ tofound: true });
+          //this.history.pushState("certfound");
+          console.log(this.state.output);
+        } else alert("Certificate not found");
       });
   };
   render() {
@@ -87,7 +95,13 @@ class App extends Component {
           />
           <Route
             path="/verify"
-            render={() => <Getcert getcertificate={this.get} />}
+            render={() => (
+              <Getcert
+                getcertificate={this.get}
+                yes={this.state.tofound}
+                details={this.state.output}
+              />
+            )}
           />
           <Route
             path="/view"

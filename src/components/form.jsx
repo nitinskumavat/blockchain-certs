@@ -33,9 +33,9 @@ class Forms extends Component {
     const isEnabled = this.canBeSubmitted();
     return (
       <div
-        className="w-100 "
+        className="container-fluid "
         style={{
-          height: "91.5vh",
+          height: "100%",
           //backgroundImage: `url(${b1})`,
           background: `url(${b1}) no-repeat `,
           backgroundSize: "cover"
@@ -43,17 +43,17 @@ class Forms extends Component {
       >
         <h1
           style={{
-            color: "white",
             fontFamily: "Montserrat",
             fontWeight: "bold",
-            fontSize: "60px"
+            fontSize: "60px",
+            color: "#66ffe7"
           }}
-          className="mb-5 pt-5"
+          className="mb-5 pt-3"
         >
           Create certificates on Blockchain
         </h1>
         <div
-          style={{ background: "rgba(255,255,255,0.5)" }}
+          style={{ marginBottom: "117px", background: "rgba(255,255,255,0.5)" }}
           className="w-50 container pt-3 pb-3 mx-auto"
         >
           <h2
@@ -63,7 +63,7 @@ class Forms extends Component {
             }}
             className="mb-2"
           >
-            Enter the details of certificate.
+            Enter the Certificate details
           </h2>
           <Form onSubmit={this.addcertificate}>
             <Form.Group>

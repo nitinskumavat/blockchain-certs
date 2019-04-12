@@ -7,7 +7,8 @@ class Certificate extends Component {
   state = {};
   onclickprint = event => {
     event.preventDefault();
-    printJs("printcertificate", "html");
+    window.print();
+    //printJs("printcertificate", "html");
   };
   render() {
     return (
@@ -17,6 +18,7 @@ class Certificate extends Component {
             <span>{this.props.sname}</span>
           </div>
           <div id="course">
+            <style>{`@media print {#course{color:red;}}`}</style>
             <span>{this.props.course} </span>
           </div>
           <div id="txh">

@@ -18,7 +18,6 @@ class Navhead extends Component {
             </Nav.Item>
             <Nav.Link href="#home">Register</Nav.Link>
             <Nav.Link href="#link">How it works?</Nav.Link>
-            <Nav.Link href="#home">Create</Nav.Link>
             <Nav.Item className="mt-2 ml-2 mr-3">
               <Link to="/verify">Verify</Link>
             </Nav.Item>

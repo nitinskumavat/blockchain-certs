@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Form, Button } from "react-bootstrap";
 import b1 from "../b3.jpg";
+import CertFound from "./certfound";
 
 class Getcert extends Component {
   canBeSubmittedid() {
@@ -44,9 +45,10 @@ class Getcert extends Component {
           background: `url(${b1}) no-repeat `,
           backgroundSize: "cover",
           border: "1px solid black",
-          height: "91.5vh"
+          height: "100%",
+          width: "100%"
         }}
-        className="w-100"
+        className="container-fluid "
       >
         <div className=" mx-auto w-50">
           <h1
@@ -57,7 +59,7 @@ class Getcert extends Component {
             }}
             className=" mt-3 mb-4"
           >
-            Verify the Certificate{" "}
+            Verify the Certificate
           </h1>
           <Form
             className="px-3 pt-4"
@@ -82,13 +84,15 @@ class Getcert extends Component {
               Get certificate
             </Button>
           </Form>
+          {this.props.yes ? <CertFound details={this.props.details} /> : null}
+
           <hr
             className="mt-5 "
             style={{ color: "red", backgroundColor: "red", height: 5 }}
           />
         </div>
 
-        <div className=" mx-auto w-50">
+        <div className=" mx-auto w-50 mb-5">
           <h1
             style={{
               color: "white",
@@ -102,7 +106,10 @@ class Getcert extends Component {
           <Form
             className="px-3 pt-4"
             onSubmit={this.gettransaction}
-            style={{ background: "rgba(255,255,255,0.5)" }}
+            style={{
+              marginBottom: "57px",
+              background: "rgba(255,255,255,0.5)"
+            }}
           >
             <Form.Group>
               <Form.Control
@@ -110,7 +117,7 @@ class Getcert extends Component {
                 name="txh"
                 value={this.state.txh}
                 onChange={this.handleChange}
-                placeholder="Enter Transaction hash of Certificate"
+                placeholder="Enter Transaction hash provided on Certificate"
               />
             </Form.Group>
             <Button
