@@ -5,6 +5,8 @@ import "./App.css";
 import Navhead from "./components/navbar";
 import Forms from "./components/form";
 import Getcert from "./components/getcert";
+import Reg from "./components/reg";
+import Intro from "./components/intro";
 import certcontract from "./config.js";
 import Certificate from "./components/certificate";
 
@@ -114,6 +116,8 @@ class App extends Component {
               />
             )}
           />
+          <Route path="/intro" component={Intro} />
+          <Route path="/reg" component={Reg} />
         </Router>
       </div>
     );

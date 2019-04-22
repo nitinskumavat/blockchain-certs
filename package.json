@@ -4,19 +4,23 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "gh-pages": "^2.0.1",
     "print-js": "^1.0.54",
     "react": "^16.8.4",
     "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.8.4",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
-    "web3": "^1.0.0-beta.50"
+    "web3": "^1.0.0-beta.50",
+    "homepage": "http://nitinskumavat.github.io/blockchain-certs"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
