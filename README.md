@@ -7,7 +7,7 @@ Copy the text from **[smart_contract.txt](https://github.com/nitinskumavat/block
 Paste this in **Remix ide** , then Compile and Deploy your smart contract
 
 Copy the **Address** of deployed contract.<br> 
-And replace the address value in [src/config.js](https://github.com/nitinskumavat/blockchain-certs/blob/master/src/config.js) with your contract address 
+And replace the address value in **[src/config.js](https://github.com/nitinskumavat/blockchain-certs/blob/master/src/config.js)** with your contract address 
 
 (We have to do above steps so that you will be owner of the smart contract and now you can add colleges using add **addCollege** function in RemixIde)
 
