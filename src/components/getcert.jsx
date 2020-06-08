@@ -45,7 +45,7 @@ class Getcert extends Component {
           background: `url(${b1}) no-repeat `,
           backgroundSize: "cover",
           border: "1px solid black",
-          height: "100%",
+          height: "100vh",
           width: "100%"
         }}
         className="container-fluid "

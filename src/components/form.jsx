@@ -35,7 +35,7 @@ class Forms extends Component {
       <div
         className="container-fluid "
         style={{
-          height: "100%",
+          height: "100vh%",
           //backgroundImage: `url(${b1})`,
           background: `url(${b1}) no-repeat `,
           backgroundSize: "cover"

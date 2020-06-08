@@ -21,14 +21,17 @@ class App extends Component {
     tofound: false
   };
   componentDidMount() {
+    console.log('mounted')
     this.loadBlockchainData();
   }
 
   async loadBlockchainData() {
+    //added line 30
+    await window.ethereum.enable()
     const accounts = await web3.eth.getAccounts();
     web3.eth.defaultAccount = accounts[0];
     //console.log(certcontract);
-    //console.log(accounts);
+    console.log(accounts);
     console.log("acc", accounts[0]);
     this.setState({ account: accounts[0] });
   }
