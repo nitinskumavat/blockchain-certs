@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### `Steps`
 
 Install the [Metamask extension](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en) in your chrome browser.<br>
-After logging in select **Ropsten Test Network** and don't forget to deposit some test Faucet by clicking on **Deposit**
+After logging in select **Ropsten Test Network** and don't forget to add some test Faucet by clicking on **Deposit**
 
 
 Copy the text from **[smart_contract.txt](https://github.com/nitinskumavat/blockchain-certs/blob/master/smart_contract.txt)**
@@ -17,7 +17,7 @@ Then Compile and Deploy your smart contract.<br>
 Copy the **Address** of deployed contract.<br> 
 And replace the address value in **[src/config.js](https://github.com/nitinskumavat/blockchain-certs/blob/master/src/config.js)** with your contract address.<br>
 
-(We have to do above steps so that you will be owner of the smart contract and now you can add colleges using add **addCollege** function in RemixIde).<br>
+(We have to do above steps so that you will be owner of the smart contract and now you can add colleges using add **addCollege** function in RemixIde after deploying the contract).<br>
 
 
 In the project directory, you can run:
