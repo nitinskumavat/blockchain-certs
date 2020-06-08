@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### `Steps`
 
-Copy the text from **[https://github.com/nitinskumavat/blockchain-certs/blob/master/smart_contract.txt](smart_contract.txt)**
+Copy the text from **`[https://github.com/nitinskumavat/blockchain-certs/blob/master/smart_contract.txt](smart_contract.txt)`**
 
 Paste this in **Remix ide** , then Compile and Deploy your smart contract
 
